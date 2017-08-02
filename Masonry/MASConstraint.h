@@ -245,6 +245,11 @@
 
 #ifdef MAS_SHORTHAND_GLOBALS
 
+#define contentCompressionResistanceVerticalPriority  mas_contentCompressionResistanceVerticalPriority
+#define contentCompressionResistanceHorizontalPriority mas_contentCompressionResistanceHorizontalPriority
+#define contentHuggingHorizontalPriority mas_contentHuggingHorizontalPriority
+#define contentHuggingVerticalPriority mas_contentHuggingVerticalPriority
+
 #define equalTo(...)                     mas_equalTo(__VA_ARGS__)
 #define greaterThanOrEqualTo(...)        mas_greaterThanOrEqualTo(__VA_ARGS__)
 #define lessThanOrEqualTo(...)           mas_lessThanOrEqualTo(__VA_ARGS__)

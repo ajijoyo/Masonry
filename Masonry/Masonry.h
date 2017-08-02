@@ -15,6 +15,7 @@ FOUNDATION_EXPORT double MasonryVersionNumber;
 FOUNDATION_EXPORT const unsigned char MasonryVersionString[];
 
 #define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
 
 #import "MASUtilities.h"
 #import "View+MASAdditions.h"
