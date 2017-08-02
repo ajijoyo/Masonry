@@ -36,6 +36,22 @@
 
 #pragma mark - NSLayoutAttribute properties
 
+-(void)setMas_contentCompressionResistanceVerticalPriority:(UILayoutPriority )value{
+    [self setContentCompressionResistancePriority:value forAxis:UILayoutConstraintAxisVertical];
+}
+
+-(void)setMas_contentCompressionResistanceHorizontalPriority:(UILayoutPriority )value{
+    [self setContentCompressionResistancePriority:value forAxis:UILayoutConstraintAxisHorizontal];
+}
+
+-(void)setMas_contentHuggingHorizontalPriority:(UILayoutPriority )value{
+    [self setContentHuggingPriority:value forAxis:UILayoutConstraintAxisHorizontal];
+}
+
+-(void)setMas_contentHuggingVerticalPriority:(UILayoutPriority )value{
+    [self setContentHuggingPriority:value forAxis:UILayoutConstraintAxisVertical];
+}
+
 - (MASViewAttribute *)mas_left {
     return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeLeft];
 }

@@ -30,6 +30,10 @@
 @property (nonatomic, strong, readonly) MASViewAttribute *mas_centerX;
 @property (nonatomic, strong, readonly) MASViewAttribute *mas_centerY;
 @property (nonatomic, strong, readonly) MASViewAttribute *mas_baseline;
+@property(nonatomic,assign) UILayoutPriority mas_contentCompressionResistanceVerticalPriority;
+@property(nonatomic,assign) UILayoutPriority mas_contentCompressionResistanceHorizontalPriority;
+@property(nonatomic,assign) UILayoutPriority mas_contentHuggingHorizontalPriority;
+@property(nonatomic,assign) UILayoutPriority mas_contentHuggingVerticalPriority;
 @property (nonatomic, strong, readonly) MASViewAttribute *(^mas_attribute)(NSLayoutAttribute attr);
 
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 80000) || (__TV_OS_VERSION_MIN_REQUIRED >= 9000) || (__MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)

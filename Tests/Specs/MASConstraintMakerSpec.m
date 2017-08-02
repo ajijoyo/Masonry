@@ -38,6 +38,7 @@ SpecBegin(MASConstraintMaker) {
     [superview addSubview:view];
 
     maker = [[MASConstraintMaker alloc] initWithView:view];
+    
 }
 
 - (void)testCreateSingleAttribute {
