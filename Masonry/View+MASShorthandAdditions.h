@@ -28,6 +28,10 @@
 @property (nonatomic, strong, readonly) MASViewAttribute *centerY;
 @property (nonatomic, strong, readonly) MASViewAttribute *baseline;
 @property (nonatomic, strong, readonly) MASViewAttribute *(^attribute)(NSLayoutAttribute attr);
+@property(nonatomic,assign) UILayoutPriority contentCompressionResistanceVerticalPriority;
+@property(nonatomic,assign) UILayoutPriority contentCompressionResistanceHorizontalPriority;
+@property(nonatomic,assign) UILayoutPriority contentHuggingHorizontalPriority;
+@property(nonatomic,assign) UILayoutPriority contentHuggingVerticalPriority;
 
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 80000) || (__TV_OS_VERSION_MIN_REQUIRED >= 9000) || (__MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)
 
@@ -93,6 +97,35 @@ MAS_ATTR_FORWARD(centerXWithinMargins);
 MAS_ATTR_FORWARD(centerYWithinMargins);
 
 #endif
+
+-(UILayoutPriority)contentCompressionResistanceVerticalPriority{
+    return self.mas_contentCompressionResistanceVerticalPriority;
+}
+
+-(void)setContentCompressionResistanceVerticalPriority:(UILayoutPriority)value{
+    self.mas_contentCompressionResistanceVerticalPriority = value;
+}
+
+-(UILayoutPriority)contentCompressionResistanceHorizontalPriority{
+    return self.mas_contentCompressionResistanceHorizontalPriority;
+}
+-(void)setContentCompressionResistanceHorizontalPriority:(UILayoutPriority)value{
+    self.mas_contentCompressionResistanceHorizontalPriority = value;
+}
+
+-(UILayoutPriority)contentHuggingHorizontalPriority{
+    return self.mas_contentHuggingHorizontalPriority;
+}
+-(void)setContentHuggingHorizontalPriority:(UILayoutPriority)value{
+    self.mas_contentHuggingHorizontalPriority = value;
+}
+
+-(UILayoutPriority)contentHuggingVerticalPriority{
+    return self.mas_contentHuggingVerticalPriority;
+}
+-(void)setContentHuggingVerticalPriority:(UILayoutPriority)value{
+    self.mas_contentHuggingVerticalPriority = value;
+}
 
 - (MASViewAttribute *(^)(NSLayoutAttribute))attribute {
     return [self mas_attribute];
